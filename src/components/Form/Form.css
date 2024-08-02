@@ -1,0 +1,15 @@
+.form {
+    font-size: 16px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: flex;
+    margin: 5% 30%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    width: auto;
+}
+
+.form .title {
+    font-size: 32px;
+}
