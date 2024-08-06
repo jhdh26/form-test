@@ -4,7 +4,7 @@ import List from '../List'
 import Button from '../Button'
 import { useState } from 'react'
 
-const Form = () => {
+const Form = (props) => {
 
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
@@ -13,27 +13,36 @@ const Form = () => {
 
 
 
-    const listGender = ['FPS', 'RPG', 'MOBA']
+
 
     const save = (event) => {
         event.preventDefault()
-        console.log('Form foi submetido =>', name,description,img,gender)
+        props.aRegisteredGame({
+            name,
+            description,
+            img,
+            gender
+        })
+        setName('')
+        setDescription('')
+        setImg('')
+        setGender('')
     }
 
     return (
 
         <section className='form'>
             <form onSubmit={save}>
-                <h1 className='title'>Bem vindo.</h1>
+                <h1 className='title'>Listagem de novos jogos</h1>
                 <InputText
                     required={true}
-                    label='Nome'
+                    label='Nome do jogo'
                     value = {name}
                     setChanged = {value => setName(value)}
                 />
                 <InputText
                     required={true}
-                    label='Descrição'
+                    label='Descrição do jogo'
                     value= {description}
                     setChanged={description => setDescription(description)}
                 />
@@ -43,10 +52,10 @@ const Form = () => {
                     setChanged={img => setImg(img)}
                 />
                 <List
-                    label='Escolha o tema do jogo'
-                    items={listGender}
+                    label='Escolha o genero do jogo'
+                    items={props.listGender}
                     value={gender}
-                    setChanged={gender => setGender(gender)}
+                    setChanged={value => setGender(value)}
                 />
                 <Button
                     nameButton='Criar Card'
