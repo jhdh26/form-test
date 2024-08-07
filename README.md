@@ -5,7 +5,7 @@
 npm install
 npm run start
 
-## Primeiro projeto desenvolvido com estudos da ALURA
+## Primeiro projeto desenvolvido com estudos da ALURA em React
 
 O projeto é um protótipo de website para divulgação de novos jogos eletronicos, onde é adicionado o nome do jogo, uma descrição, uma imagem e escolhido em de qual gênero ele é.
 
