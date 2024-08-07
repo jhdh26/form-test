@@ -7,18 +7,18 @@ function App() {
   const listGender = [
     {
       name:'RPG',
-      firstColor:'#A6D157',
-      secondColor:'#BDD1E6',
+      firstColor:'#f4b4a1',
+      secondColor:'#143d59',
     },
     {
       name:'FPS',
-      firstColor:'#E06B69',
-      secondColor:'#FDE7E8',
+      firstColor:'#ffe042',
+      secondColor:'#e71989',
     },
     {
       name:'MOBA',
-      firstColor:'#D86EBF',
-      secondColor:'#7084E6',
+      firstColor:'#0e387a',
+      secondColor:'#9fafca',
     }
   ]
 
